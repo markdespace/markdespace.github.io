@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bxSlider</title>
+    <!--置入套件專用CSS
+    (必須要放在自己寫的CSS前面，才可以覆蓋預設的設定)-->
+    <link rel="stylesheet" href="css/jquery.bxslider.css">
+    <!--自己寫的CSS-->
+<style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    a {color: dodgerblue; text-decoration: none;}
+    p, li {line-height: 25px;}
+    /*客製化內容（自行調整 bsXlider CSS 設定）*/
+    .bx-wrapper {/*預設的外框陰影*/
+    box-shadow: 0 0 0;/*消去陰影*/
+    border:0;/*消去邊框*/ }
+</style>
+</head>
+<body>
+<h1>輪動圖片套件示範 bxSlider</h1>
+<p>在網頁的製作上，時常會有需要多張圖片同時展示的時候。但是受限於螢幕尺寸與版面空間有限，往往無法一次全部展現出來。這時候，輪動式的展示方式或許就會是一個好方法。</p>
+<p>CSS 本身就具備 Animation 相關的功能語法，要做出輪播動態並非不可能，這時候只要再加上 JavaScript 的輔助，就可以做出精緻的輪動式圖片效果。</p>
+<h2>bxSlider</h2>
+    <p>bxSlider 是一款相當老牌的免費幻燈片式輪播套件，由美國程式設計師 Steven Wanderski 所開發。</p>
+
+<!--置入幻燈片相關 HTML 與圖片-->
+<div class="bxslider">
+    <div><img src="image/ekaterina-kuznetsova-unsplash.jpg"></div>
+    <div><img src="image/oxana-melis01-unsplash.jpg"></div>
+    <div><img src="image/oxana-melis02-unsplash.jpg"></div>
+    <div><img src="image/oxana-melis03-unsplash.jpg"></div>
+  </div>
+
+
+<h2>注意事項：</h2>
+<h2>參考資料：</h2>
+<ul>
+    <li><a href="https://bxslider.com/" target="_blank">https://bxslider.com/</a></li>
+        <li><a href="https://github.com/stevenwanderski/bxslider-4" target="_blank">https://github.com/stevenwanderski/bxslider-4</a></li>
+</ul>
+
+
+
+<!--置入 JQuery 套件（可用用線上的，也可以自己下載下來）-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!--置入套件專用 JavaScript-->
+<script src="js/jquery.bxslider.js"></script>
+<!--設定相關環境參數-->
+<script type="text/javascript">
+$('.bxslider').bxSlider({
+  auto: true, //自動播放
+  stopAutoOnClick: true, //滑鼠點選時停止播放
+  pager: true, //顯示下方圓點
+  slideWidth: 600 //圖片寬度(像素)
+});
+</script>
+</body>
+</html>
